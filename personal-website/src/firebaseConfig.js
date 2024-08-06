@@ -1,11 +1,11 @@
 // src/firebaseConfig.js
 const firebaseConfig = {
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "personal-website-1ad43",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
-    measurementId: "YOUR_MEASUREMENT_ID"
-  };
-  
-  export default firebaseConfig;
+  apiKey: "AIzaSyD1l1TDThVvw0Jg2C3PNdHnkG22b3HeA6I",
+  authDomain: "personal-website-1ad43.firebaseapp.com",
+  projectId: "personal-website-1ad43",
+  storageBucket: "personal-website-1ad43.appspot.com",
+  messagingSenderId: "874068185397",
+  appId: "1:874068185397:web:916199e5b5d82c6d8cbc7c"
+};
+
+export default firebaseConfig;
