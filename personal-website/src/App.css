@@ -15,7 +15,8 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures the element is at least as tall as the viewport */
+  width: 100%; /* Ensures the element stretches to the full width of the viewport */
   display: flex;
   flex-direction: column;
   align-items: center;
