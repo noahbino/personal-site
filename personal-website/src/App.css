@@ -44,3 +44,10 @@
 .link:hover {
   background-color: white; /* Highlight color */
 }
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
