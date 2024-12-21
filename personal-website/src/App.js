@@ -1,5 +1,4 @@
 import React from 'react';  // Import React here
-import logo from './logo.svg';
 import './App.css';
 import { LinkedInLink, GitHubLink } from "./Components/Links";
 
