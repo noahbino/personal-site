@@ -12,82 +12,45 @@ export const APPSTORE_IMG = "https://static-00.iconduck.com/assets.00/apple-app-
 
 export const homeLinkClick = "Home | Link Click"
 
-// LinkedIn Link Component
-export const LinkedInLink = () => {
+export const LinkType = {
+  linkedin: {
+    image: LINKEDIN_IMG,
+    link: LINKEDIN_URL,
+    name: "LinkedIn"
+  },
+  github: {
+    image: GITHUB_IMG,
+    link: GITHUB_URL,
+    name: "GitHub"
+  },
+  appStore: {
+    image: APPSTORE_IMG,
+    link: APPSTORE_URL,
+    name: "AppStore"
+  }
+}
+
+export const LinkButton = ({ linkType }) => {
   const handleClick = () => {
-    logEvent(analytics, homeLinkClick, {
-      link_name: "LinkedIn",
-      link_url: LINKEDIN_URL
+    logEvent(analytics, "home_link_click", {
+      link_name: linkType.name,
+      link_url: linkType.link
     });
   };
 
   return (
-  <a
-    className="link"
-    href={LINKEDIN_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={handleClick}
-    style={{ display: "flex", alignItems: "center", gap: "8px" }}
-  >
-    LinkedIn
-    <img
-      src={LINKEDIN_IMG}
-      alt="LinkedIn Logo"
-      style={{ width: "60px", height: "60px" }}
-    />
-  </a>
-)}
-
-// Github component
-export const GitHubLink = () => {
-  const handleClick = () => {
-    logEvent(analytics, homeLinkClick, {
-      link_name: "GitHub",
-      link_url: GITHUB_URL
-    })
-  }
-
-  return (
     <a
       className="link"
-      href={GITHUB_URL} 
+      href={linkType.link} 
       target="_blank"
       rel="noopener noreferrer"
-      onClick={handleClick}
+      onClick={handleClick} 
       style={{ display: "flex", alignItems: "center", gap: "8px" }}
     >
-      GitHub
+      {linkType.name} {}
       <img
-        src={GITHUB_IMG}
-        alt="GitHub Logo"
-        style={{ width: "60px", height: "60px" }}
-      />
-    </a>
-  )
-}
-
-export const AppStore = () => {
-  const handleClick = () => {
-    logEvent(analytics, homeLinkClick, {
-      link_name: "GitHub",
-      link_url: APPSTORE_URL
-    })
-  }
-
-  return (
-    <a
-      className="link"
-      href={APPSTORE_URL} 
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={handleClick}
-      style={{ display: "flex", alignItems: "center", gap: "8px" }}
-    >
-      App Store
-      <img
-        src={APPSTORE_IMG}
-        alt="GitHub Logo"
+        src={linkType.image} 
+        alt={linkType.name + " Logo"} 
         style={{ width: "60px", height: "60px" }}
       />
     </a>

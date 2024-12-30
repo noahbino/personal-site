@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';  // Import React here
 import './App.css';
-import { LinkedInLink, GitHubLink, AppStore } from "./Components/Links";
+import { LinkedInLink, GitHubLink, AppStore, LinkButton } from "./Components/Links";
 import { analytics } from "./firebaseConfig"
 import { logEvent } from "firebase/analytics"
+import { LinkType } from './Components/Links.js';
 
 function App() {
 useEffect(() => {
@@ -13,9 +14,9 @@ useEffect(() => {
     <div className="App">
       <header className="App-header">
         <div className="link-container">
-          <LinkedInLink />
-          <GitHubLink />
-          <AppStore />
+        <LinkButton linkType={ LinkType.linkedin } />
+        <LinkButton linkType={ LinkType.github } />
+        <LinkButton linkType={ LinkType.appStore } /> 
         </div>
       </header>
     </div>
